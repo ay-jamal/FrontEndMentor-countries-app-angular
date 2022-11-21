@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Big+Shoulders+Display:wght@700&family=Cairo:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Manrope:wght@500;800&family=Montserrat:wght@500;700&family=Nunito+Sans:wght@300;600;800&family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Outfit:wght@100;300;400;600;700&family=Overpass:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=Space+Mono:wght@700&family=Work+Sans:wght@400;700&display=swap");
+
+:root {
+  --nav-bg: white;
+  --main-bg: #fafafa;
+  --text-color: black;
+
+  --hover-bg: #fafafa;
+  --shadow: 0 0 7px 2px #00000008;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--main-bg);
+}
+
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+.countries-container {
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem;
+  color: var(--text-color);
+}
+
+.navbar > div {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1.5rem;
+  }
+  .navbar h1 {
+    font-size: 16px;
+  }
+}

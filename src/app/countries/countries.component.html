@@ -1,0 +1,39 @@
+<div class="countries-container">
+  <form class="form">
+    <div>
+      <input
+        type="text"
+        [(ngModel)]="SercheText"
+        placeholder="Search For Country"
+        name="search"
+      />
+    </div>
+    <div class="toggle" (click)="toggle()">
+      <div class="label">
+        <p>Select Region</p>
+        <span
+          [ngStyle]="
+            toggleRegion
+              ? { transform: 'rotate(90deg)' }
+              : { transform: 'rotate(0deg)' }
+          "
+          >>
+        </span>
+      </div>
+      <div class="option" [ngClass]="toggleRegion ? '' : 'none'">
+        <div class="value" (click)="getRegion('all')">All</div>
+        <div class="value" (click)="getRegion('africa')">Africa</div>
+        <div class="value" (click)="getRegion('America')">America</div>
+        <div class="value" (click)="getRegion('asia')">Asia</div>
+        <div class="value" (click)="getRegion('europe')">Europe</div>
+        <div class="value" (click)="getRegion('ocenia')">Ocenia</div>
+      </div>
+    </div>
+  </form>
+  <div class="grid">
+    <ng-container *ngFor="let country of countryList | filter: SercheText">
+      <app-item [item]="country"></app-item>
+      <router-outlet></router-outlet>
+    </ng-container>
+  </div>
+</div>

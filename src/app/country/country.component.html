@@ -1,0 +1,44 @@
+<div class="country-container">
+  <button (click)="goBack()">Back</button>
+  <div class="country">
+    <div class="image">
+      <img [src]="item.flags.png" alt="" />
+    </div>
+    <div class="text">
+      <div class="heading">
+        <h2>{{ item.name.common }}</h2>
+      </div>
+      <div class="text-body">
+        <div class="text-right">
+          <p>
+            Native Name: <span>{{ item.name.nativeName.bul?.common }}</span>
+          </p>
+          <p>
+            Population: <span>{{ item?.population }}</span>
+          </p>
+          <p>
+            Region: <span>{{ item?.region }}</span>
+          </p>
+          <p>
+            Sub Region: <span>{{ item?.subregion }}</span>
+          </p>
+          <p>
+            Capital:<span>{{ item?.capital }}</span>
+          </p>
+        </div>
+        <div class="text-left">
+          <p>
+            Top Level Domain: <span>{{ item?.tld }}</span>
+          </p>
+          <p>Currencies: {{ item.currencies?.BGN?.symbol }}</p>
+          <p>
+            Languages:
+            <span *ngFor="let lang of item.languages | keyvalue">
+              {{ lang.value }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

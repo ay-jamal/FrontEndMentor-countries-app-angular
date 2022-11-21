@@ -1,0 +1,42 @@
+// @media (max-width: 767px) {
+//   .container {
+//     justify-content: center;
+//   }
+// }
+
+.country-card {
+  .img {
+    width: 265px;
+    height: 170px;
+    background-image: url(../../../assets/images/imgLoading.svg);
+    background-size: cover;
+    background-position: 0% 0%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  cursor: pointer;
+
+  color: var(--text-color);
+  width: fit-content;
+  overflow: hidden;
+  background-color: var(--nav-bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+
+  box-shadow: 0 2px 9px #0000000d;
+
+  .country-body {
+    padding: 2rem 2rem;
+  }
+  p {
+    padding-block: 0.2rem;
+    span {
+      font-weight: 600;
+    }
+  }
+  h3 {
+    width: 200px;
+  }
+}
